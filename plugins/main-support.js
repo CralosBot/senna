@@ -6,33 +6,33 @@ m.reply(`
 
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
 ▢ Canal
-${fgcanal}
+${Carlos}
 
 ▢ Grupo *1*
-${bgp}
+${VPS}
 
 ▢ Grupo *2*
-${bgp2}
+${VPS}
 
 ▢ Grupo *NSFW* 🔞
 ${bgp3}
 
 ▢ 𝐌𝐘 - 𝐌𝐚𝐲𝐥𝐮𝐱 | ᴮᴼᵀ⚡
-https://chat.whatsapp.com/CTILZXSriIE3M40anVyPT4
+N/A
 
 ▢ 📲💻ANDROID WORLD🎬🎮
-https://chat.whatsapp.com/Ly4I2LObSvW8VgOnJjofgA
+N/A
 
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
 ▢ Todos los Grupos
- https://instabio.cc/fg98ff
+ N/A
 
 ▢ *Telegram*
-• https://t.me/fgawgp
+• https://unlocker593
  ▢ *PayPal*
-• https://paypal.me/fg98f
+• N/A
 ▢ *YouTube*
-• https://www.youtube.com/fg98f`)
+• N/A`)
 
 }
 handler.help = ['support']
