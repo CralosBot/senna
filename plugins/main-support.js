@@ -9,30 +9,29 @@ m.reply(`
 ${Carlos}
 
 ▢ Grupo *1*
-${VPS}
+${VPS1}
 
 ▢ Grupo *2*
-${VPS}
+${VPS2}
 
 ▢ Grupo *NSFW* 🔞
-${bgp3}
+${VPS3}
 
-▢ 𝐌𝐘 - 𝐌𝐚𝐲𝐥𝐮𝐱 | ᴮᴼᵀ⚡
-N/A
+▢ EC | ᴮᴼᵀ⚡
+ https://chat.whatsapp.com/Kh8QYTDVC4oHlNYBPmFCkx
 
-▢ 📲💻ANDROID WORLD🎬🎮
-N/A
-
+▢ 🎄❄🇪🇨🖥NETFREE PREMIUM EC-VPS🇪🇨❄🎄
+ https://chat.whatsapp.com/EUAla1iIFMy0QuZZPX9k9j
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
 ▢ Todos los Grupos
- N/A
+ https://chat.whatsapp.com/Kh8QYTDVC4oHlNYBPmFCkx
 
 ▢ *Telegram*
-• https://unlocker593
+• https://t.me/unlocker593
  ▢ *PayPal*
 • N/A
 ▢ *YouTube*
-• N/A`)
+• https://www.youtube.com/@ChumoGH`)
 
 }
 handler.help = ['support']
