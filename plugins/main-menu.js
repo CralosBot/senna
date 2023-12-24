@@ -29,14 +29,14 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-◈ ━━━━━ *Ribx  ┃ ᴮᴼᵀ* ━━━━━ ◈
+◈ ━━━━━ *Mordecai  ┃ ᴮᴼᵀ* ━━━━━ ◈
  
 👋🏻 Hola! *%name*
 👥 Usuarios : %totalreg
 🟢 Tiempo activo : %muptime
 %sbot
-▢ Descarga *FGWhatsApp*
-• https://fgmods.xyz
+▢ Descarga *WhatsApp*
+• @593961745744
 ────────────
 %readmore
   ≡ *LISTA DE MENUS*
@@ -111,7 +111,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `⭐ Powered by FG98 https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `⭐ Powered by Carlos https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
