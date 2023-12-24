@@ -50,23 +50,23 @@ let infobt = `
 ▢ Total Chats: *${chats.length}*
 
 *≡ OWNER*
-  *FG98*
+  *CARLOS*
 ▢ Instagram :
   • ${fgig}
 ▢ Telegram : 
-  • t.me/fgsupp_bot (FG) 
-  • t.me/fg98ff (canal)
-  • t.me/fgawgp (grupo)
+  • t.me/unlocker593 (CA) 
+  • t.me/ (canal)
+  • t.me/ (grupo)
 ▢ YouTube : 
-  • https://youtube.com/fg98f
+  • NULL
   
  *≡ HELPERS*
-  *ANDREA*
-▢ WhatsApp : wa.me/573125484672`
+  *CARLOS*
+▢ WhatsApp : wa.me/593961745744
 
 /*conn.sendButton(m.chat, infobt, mssg.ig, null, [
-  ['ꨄ︎ Apoyar', `${usedPrefix}donate`],
-   ['⌬ Grupos', `${usedPrefix}gpdylux`]
+  ['ꨄ︎ Apoyar', `${usedPrefix}`],
+   ['⌬ Grupos', `${usedPrefix}`]
  ], m)*/
  m.reply(infobt)
 
