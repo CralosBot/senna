@@ -9,13 +9,13 @@ m.reply(`
 ${fgcanal}
 
 ▢ Grupo *1*
-${VPS1}
+${bgp}
 
 ▢ Grupo *2*
-${VPS2}
+${bgp2}
 
 ▢ Grupo *NSFW*
-${VPS3}
+${bgp3}
 
 ▢ EC | ᴮᴼᵀ⚡
 https://chat.whatsapp.com/Kh8QYTDVC4oHlNYBPmFCkx
