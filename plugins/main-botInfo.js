@@ -52,11 +52,11 @@ let infobt = `
 *≡ OWNER*
   *CARLOS*
 ▢ Instagram :
-  • ${fgig}
+  • ${CARLOS}
 ▢ Telegram : 
   • t.me/unlocker593 (CA) 
-  • t.me/ (canal)
-  • t.me/ (grupo)
+  • t.me/ChumoGHADM (canal)
+  • t.me/ChumoGH_ADM (grupo)
 ▢ YouTube : 
   • NULL
   
