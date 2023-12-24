@@ -6,7 +6,7 @@ m.reply(`
 
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
 ▢ Canal
-${Carlos}
+${fhg
 
 ▢ Grupo *1*
 ${VPS1}
