@@ -1,4 +1,4 @@
-   
+
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 import './config.js'; 
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
@@ -51,7 +51,7 @@ global.db = new Low(
   /https?:\/\//.test(opts['db'] || '') ?
     new cloudDBAdapter(opts['db']) : /mongodb(\+srv)?:\/\//i.test(opts['db']) ?
       (opts['mongodbv2'] ? new mongoDBV2(opts['db']) : new mongoDB(opts['db'])) :
-      new JSONFile(`${opts._[0] ? opts._[0] + '_' : ''}database.json`)
+      new JSONFile(${opts._[0] ? opts._[0] + '_' : ''}database.json)
 )
 
 
@@ -81,7 +81,7 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 //-- SESSION
-global.authFolder = `sessions`
+global.authFolder = sessions
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
 let { version, isLatest } = await fetchLatestBaileysVersion() 
 /*const connectionOptions = {
@@ -94,7 +94,7 @@ const connectionOptions = {
 	    version,
         printQRInTerminal: true,
         auth: state,
-        browser: ['senna-bot', 'Safari', '1.0.0'], 
+        browser: ['cgh-bot', 'Safari', '1.0.0'], 
 	      patchMessageBeforeSending: (message) => {
                 const requiresPatch = !!(
                     message.buttonsMessage 
@@ -151,7 +151,7 @@ async function clearTmp() {
 
 setInterval(async () => {
 	await clearTmp()
-	//console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
+	//console.log(chalk.cyan(✅  Auto clear  | Se limpio la carpeta tmp))
 }, 60000) //1 munto
 
 async function connectionUpdate(update) {
@@ -169,25 +169,25 @@ async function connectionUpdate(update) {
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (connection === 'close') {
     if (reason === DisconnectReason.badSession) {
-        conn.logger.error(`⚠️ Sesión incorrecta, por favor elimina la carpeta ${global.authFolder} y escanea de nuevo`);
+        conn.logger.error(⚠ Sesión incorrecta, por favor elimina la carpeta ${global.authFolder} y escanea de nuevo);
     } else if (reason === DisconnectReason.connectionClosed) {
-        conn.logger.warn(`🔁 Conexión cerrada, reconectando...`);
+        conn.logger.warn(🔁 Conexión cerrada, reconectando...);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionLost) {
-        conn.logger.warn(`🖥️ Conexión perdida con el servidor, reconectando...`);
+        conn.logger.warn(🖥 Conexión perdida con el servidor, reconectando...);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.connectionReplaced) {
-        conn.logger.error(`📥 Conexión reemplazada, se ha abierto otra sesión nueva. Por favor, reinicia el bot`);
+        conn.logger.error(📥 Conexión reemplazada, se ha abierto otra sesión nueva. Por favor, reinicia el bot);
     } else if (reason === DisconnectReason.loggedOut) {
-        conn.logger.error(`📵 Dispositivo desconectado, por favor elimina la carpeta ${global.authFolder} y escanea de nuevo.`);
+        conn.logger.error(📵 Dispositivo desconectado, por favor elimina la carpeta ${global.authFolder} y escanea de nuevo.);
     } else if (reason === DisconnectReason.restartRequired) {
-        conn.logger.info(`🔁 Reinicio necesario, reiniciando...`);
+        conn.logger.info(🔁 Reinicio necesario, reiniciando...);
         await global.reloadHandler(true).catch(console.error);
     } else if (reason === DisconnectReason.timedOut) {
-        conn.logger.warn(`⏰ Tiempo de espera de conexión agotado, reconectando...`);
+        conn.logger.warn(⏰ Tiempo de espera de conexión agotado, reconectando...);
         await global.reloadHandler(true).catch(console.error);
     } else {
-        conn.logger.warn(`⚠️ Razón de desconexión desconocida ${reason || ''}: ${connection || ''}`);
+        conn.logger.warn(⚠ Razón de desconexión desconocida ${reason || ''}: ${connection || ''});
         await global.reloadHandler(true).catch(console.error);
     }
 }
@@ -202,7 +202,7 @@ let isInit = true;
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
   try {
-    const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
+    const Handler = await import(./handler.js?update=${Date.now()}).catch(console.error)
     if (Object.keys(Handler || {}).length) handler = Handler
   } catch (e) {
     console.error(e)
@@ -269,22 +269,22 @@ global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = global.__filename(join(pluginFolder, filename), true)
     if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`🌟 Plugin Actualizado - '${filename}'`)
+      if (existsSync(dir)) conn.logger.info(🌟 Plugin Actualizado - '${filename}')
       else {
-        conn.logger.warn(`🗑️ Plugin Eliminado - '${filename}'`)
+        conn.logger.warn(🗑 Plugin Eliminado - '${filename}')
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`✨ Nuevo plugin - '${filename}'`)
+    } else conn.logger.info(✨ Nuevo plugin - '${filename}')
     let err = syntaxerror(readFileSync(dir), filename, {
       sourceType: 'module',
       allowAwaitOutsideFunction: true
     })
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
+    if (err) conn.logger.error(syntax error while loading '${filename}'\n${format(err)})
     else try {
-      const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
+      const module = (await import(${global.__filename(dir)}?update=${Date.now()}))
       global.plugins[filename] = module.default || module
     } catch (e) {
-      conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
+      conn.logger.error(error require plugin '${filename}\n${format(e)}')
     } finally {
       global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
     }
