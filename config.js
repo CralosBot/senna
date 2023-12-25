@@ -20,11 +20,11 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'Senna┃ᴮᴼᵀ' 
+global.packname = 'Mordecai┃ᴮᴼᵀ' 
 global.author = '@fg98' 
 
 //--info FG
-global.botName = 'Senna'
+global.botName = 'Mordecai'
 global.fgig = 'N/A' 
 global.fgsc = 'https://github.com/CralosBot/senna' 
 global.fgyt = 'https://www.youtube.com/@ChumoGH'
