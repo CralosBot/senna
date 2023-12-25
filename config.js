@@ -11,8 +11,8 @@ global.mods = ['']
 global.prems = ['593961745744', '593961745744']
 global.APIs = { // API Prefix
   // name: 'https://website' 
-  nrtm: 'https://fg-ntm.ddns.net',
-  fgmods: 'https://api.fmods.xyz'
+  nrtm: 'https://fg-ntm.ddrns.net',
+  fgmods: 'https://api.fgmods.xyz'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
