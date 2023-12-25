@@ -28,7 +28,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     } else {
         try {
             let res = await fg.xnxxSearch(text)
-             let fgg = res.result.map((v, i) => `*📌${mssg.title}* : ${v.title}\n*🔗${mssg.link}:* ${v.link}\n`).joi('─────────────────\n\n') 
+             let fgg = res.result.map((v, i) => `*📌${mssg.title}* : ${v.title}\n*🔗${mssg.link}:* ${v.link}\n`).join('─────────────────\n\n') 
               if (res.status) m.reply(fgg)       
               } catch (e) {
               m.reply(`🔴 ${mssg.error}`)
